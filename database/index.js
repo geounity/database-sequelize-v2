@@ -2,13 +2,15 @@ const debug = require("debug")("geounity:db:index");
 
 const models = require("./models");
 
+// Longjohn entrega mas información cuando ocurre un error.
 if (process.env.NODE_ENV !== "production") require("longjohn");
 
 module.exports = async () => {
   debug("Sequelize connecting to Postgres");
   const sequelize = models.sequelize;
   await sequelize.authenticate();
-  await sequelize.sync({ force: true })
+  await sequelize.sync({ force: true });
+  
   // Services
   const countryService = require("./services/country");
   const debateService = require("./services/debate");

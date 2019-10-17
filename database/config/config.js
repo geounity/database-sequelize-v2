@@ -8,7 +8,7 @@ module.exports = {
   dev: {
     url: process.env.DEV_DATABASE_URL,
     dialect: "postgres",
-    logging: s => debug(chalk.green(s)),
+    logging: s => debug(chalk.cyan(s)),
     define: {
       freezeTableName: false, // transforma el nombre de la tabla a pural
       timestamps: true, // agrega atributos (updatedAt, createdAt)
