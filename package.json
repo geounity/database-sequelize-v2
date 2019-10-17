@@ -1,0 +1,23 @@
+{
+  "name": "databas_geounity_sequelize",
+  "version": "0.1.0",
+  "description": "Moderator app of the points of view in debates - Database module",
+  "main": "database/index.js",
+  "scripts": {
+    "setup": "DEBUG=gu:* node database/setup.js"
+  },
+  "author": "Sebastian Cardoso Castillo <sebastiancardoso92@gmail.com> (http://sebastiancardoso.com)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "dotenv": "^8.2.0",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.19.7",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1",
+    "longjohn": "^0.2.12"
+  }
+}
